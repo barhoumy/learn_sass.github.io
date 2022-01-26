@@ -1,0 +1,71 @@
+@import 'settings';
+@import 'buttons';
+ a{color: $heading-color;
+    //color: text-color ($primary-color);
+    text-decoration: none;
+    /*&:link{
+        color: blue;
+    }*/
+   
+   /* &:active{
+        color: greenyellow;
+    }
+    **/
+    /*&:visited{
+        color:yellow;
+    }
+    &:hover{
+        color: yellow;
+    }*/
+        }
+body{
+    background-color: $body-color;
+    font-family: $body-family;
+    line-height: 1.6;
+}
+.showcase{
+    //background-color: $primary-color;
+   // color: text-color ($primary-color);//$heading-color;
+   @include  background-color($primary-color);
+   height:600px;
+    padding:  15px 25px;
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    ul{
+        display: flex;
+        list-style-type: none;
+        li{
+            padding: 15px;
+           
+            
+        }
+        
+       
+    }
+    a{
+        //a:hover
+        &:hover{
+            color: $link-color-hover;
+        }
+    }
+    
+    
+}
+//showcase-content
+&-content{
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     img{
+         width: 50%;
+     }  
+
+}
+
+}
+
+

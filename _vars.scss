@@ -1,0 +1,34 @@
+//-------------variables;
+//------color
+$heading-color:#fff;
+$primary-color:rgba(167, 8, 167, 0.467);///#333;
+$secondary-color:orange;
+$link-color-hover:yellow;
+$sub-heading-color:#f4f4f4;
+$body-color:#f4f4f4;
+
+//------fonts
+$body-family:helvetica,sans-serif;
+//Set text color based on background
+@function set-banner-text-color($color){
+    @if (lightness($colour) >40){
+        @return #333
+    }
+    @else
+   {
+    @return #fff
+   } 
+}
+////Set text color based on background
+@mixin background-color($color) {
+    background-color: $color;
+    color:text-color($color) ;
+           
+       }
+   
+       $steps:(1,2,3,4,5,6);
+       @each  $step in  $steps{
+           .my-#{$step} {
+               margin: #{$step*10}px 0;
+           }
+       }
